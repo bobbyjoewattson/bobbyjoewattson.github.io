@@ -1,0 +1,33 @@
+{
+  "sushi": [ {
+    "name": "Maguro",
+    "price": 3.50,
+    "pieces": 2
+    },
+    {
+      "name": "Salmon",
+      "price": 2.75,
+      "pieces": 2
+    },
+    {
+      "name": "Negitoro",
+      "price": 3.75,
+      "pieces": 2
+    },
+    {
+      "name": "Chutoro",
+      "price": 4.50,
+      "pieces": 1
+    },
+    {
+      "name": "Garlic Salmon",
+      "price": 3.00,
+      "pieces": 2
+    },
+    {
+      "name": "Hamachi",
+      "price": 2.85,
+      "pieces": 2
+    }
+  ]
+}
