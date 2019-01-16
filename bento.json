@@ -12,9 +12,9 @@
       ]
      },
       {
-      "name": "soft shell crab",
-      "price": 32.67,
-      "kilo": 2,
+      "name": "medium shell crab",
+      "price": 99,
+      "kilo": 0.25,
       "sides":
       [
         "rice",
