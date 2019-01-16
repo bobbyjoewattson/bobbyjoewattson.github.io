@@ -1,0 +1,26 @@
+{
+  "food": [
+     {
+      "name": "soft shell crab",
+      "price": 32.67,
+      "kilo": 2,
+      "sides":
+      [
+        "rice",
+        "salad",
+        "ginger"
+      ]
+     },
+      {
+      "name": "soft shell crab",
+      "price": 32.67,
+      "kilo": 2,
+      "sides":
+      [
+        "rice",
+        "salad",
+        "ginger"
+      ]
+     }
+  ]
+}
