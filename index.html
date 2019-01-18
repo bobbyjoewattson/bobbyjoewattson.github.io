@@ -1,17 +1,80 @@
 <html>
   <head>
+    <style>
+      #maguro{
+        height: 265px;
+        width: 300px;
+        background-image:url('https://i.pinimg.com/236x/bb/30/95/bb30956ed53e9e561bfb4efd5932a2b5--nigiri-sushi-eat-sushi.jpg');
+        background-size: cover;
+        float: left;
+        margin: 15px;
+      }
+      #salmon {
+         height: 265px;
+        width: 300px;
+        background-image:url('https://www.manusmenu.com/wp-content/uploads/2013/09/1-Salmon-Nigiri-1-1-of-1.jpg');
+        background-size: cover;
+        float: left;
+        margin: 15px;
+      }
+      #negitoro {
+        height: 265px;
+        width: 300px;
+        background-image:url('https://c1.staticflickr.com/3/2500/4206446239_8673bfa04e_b.jpg');
+        background-size: cover;
+        float: left;
+        margin: 15px;
+      }
+      #chutoro {
+        height: 265px;
+        width: 300px;
+        background-image:url('http://4.bp.blogspot.com/-pIeBn0Ep_Ds/U0kAeLvIruI/AAAAAAACAPk/RnjNsobXTZs/s1600/IMG_20140411_173644.jpg');
+        background-size: cover;
+        float: left;
+        margin: 15px;
+      }
+      #garlic {
+        height: 265px;
+        width: 300px;
+        background-image:url('http://sushimebellevue.com/wp-content/uploads/2016/10/24.jpg');
+        background-size: cover;
+        float: left;
+        margin: 15px;
+      }
+      #katsuo {
+        height: 265px;
+        width: 300px;
+        background-image:url('http://shizuokagourmet.files.wordpress.com/2010/01/katsuo-sushi-2.jpg');
+        background-size: cover;
+        float: left;
+        margin: 15px;
+      }
+      .sushi {
+        color: blue
+      }
+    </style>
   </head>
   <body>
+    <div id="maguro"><h1 class="sushi">Maguro Sushi</h1>
+    <button id="maguro2" onclick="maguro()">Order</button>
+    </div>
+    <div id="salmon"><h1 class="sushi">Salmon Sushi</h1></div>
+    <div id="negitoro"><h1 class="sushi">Negitoro Sushi</h1></div>
+    <div id="chutoro"><h1 class="sushi">Chutoro Sushi</h1></div>
+    <div id="garlic"><h1 class="sushi">Garlic Salmon Sushi</h1></div>
+    <div id="katsuo"><h1 class="sushi">Katsuo Sushi</h1></div>
     <script>
+    function maguro() {
+      
+    }
        var xmlhttp = new XMLHttpRequest();
-
 xmlhttp.onreadystatechange= function() {
   if (this.readyState == 4 && this.status == 200) {
      var mydata = JSON.parse(this.responseText);
-    window.alert(mydata.food[1].name);
+    document.getElementById(mydata.sushi[1].name).innerHTML = maguro;
   }
 };
-xmlhttp.open("GET","bento.json", true);
+xmlhttp.open("GET","sushi.json", true);
 xmlhttp.send();
     </script>
   </body>
