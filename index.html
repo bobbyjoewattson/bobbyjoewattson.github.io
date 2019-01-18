@@ -81,7 +81,7 @@
 xmlhttp.onreadystatechange= function() {
   if (this.readyState == 4 && this.status == 200) {
      var mydata = JSON.parse(this.responseText);
-    document.getElementById(mydata.sushi[1].name).innerHTML = maguro;
+    document.getElementById(mydata.sushi[1].name).innerHTML = "maguro";
   }
 };
 xmlhttp.open("GET","sushi.json", true);
