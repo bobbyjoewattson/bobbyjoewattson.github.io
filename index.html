@@ -49,39 +49,55 @@
         float: left;
         margin: 15px;
       }
+      #cart {
+        height: 265px;
+        width: 300px;
+        float: left;
+        margin: 15px;
+        background-color: blue;
+      }
       .sushi {
-        color: blue
+        color: White;
       }
     </style>
   </head>
   <body>
     <div id="maguro"><h1 class="sushi">Maguro Sushi</h1>
-    <button id="maguro2" onclick="maguro()">Order</button>
+    <input type="number" id="maguro2">
+    <button id="maguro3" onclick="maguro()">Order</button>
     </div>
     <div id="salmon"><h1 class="sushi">Salmon Sushi</h1>
-    <button id="salmon2" onclick="salmon()">Order</button>
+    <input type="number" id="salmon2">
+    <button id="salmon3" onclick="salmon()">Order</button>
     </div>
     <div id="negitoro"><h1 class="sushi">Negitoro Sushi</h1>
-    <button id="negi2" onclick="toro()">Order</button>
+    <input type="number" id="negi2">
+    <button id="negi3" onclick="toro()">Order</button>
     </div>
     <div id="chutoro"><h1 class="sushi">Chutoro Sushi</h1>
+    <input type="number" id="maguro3">
     <button id="chutoro2" onclick="chutoro()">Order</button>
     </div>
     <div id="garlic"><h1 class="sushi">Garlic Salmon Sushi</h1>
+    <input type="number" id="maguro3">
     <button id="garlic2" onclick="garlic()">Order</button>
     </div>
     <div id="katsuo"><h1 class="sushi">Katsuo Sushi</h1>
+    <input type="number" id="maguro3">
     <button id="katsuo2" onclick="katsuo()">Order</button>
+    </div>
+    <div id="cart"><h1 class="sushi">CART</h1>
+    <button id="cart2">Check Out</button>
     </div>
     <script>
     function maguro() {
-      
+      document.getElementById('maguro').innerHTML = ""
     }
        var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange= function() {
   if (this.readyState == 4 && this.status == 200) {
      var mydata = JSON.parse(this.responseText);
-    document.getElementById(mydata.sushi[1].name).innerHTML = "maguro";
+    document.getElementById(mydata.sushi[1].name).innerHTML = maguro;
   }
 };
 xmlhttp.open("GET","sushi.json", true);
