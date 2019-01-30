@@ -112,17 +112,7 @@ xmlhttp.onreadystatechange= function() {
 };
 xmlhttp.open("GET","sushi.json", true);
 xmlhttp.send();
-var previous= null;
-var current = null;
-setInternal(function() {
-  $.getJSON("sushi.json", function(json) {
-    current= JSON.stringify(json);
-    if(previous && current && previous !== current) {
-      location.reload();
-    }
-    previous = current;
-  });
-}, 2000);
+
     </script>
   </body>
 </html>
