@@ -97,6 +97,9 @@
     var tax = 1.04712;
      maguroTotal = 0;
      salmonTotal = 0;
+     chutoroTotal= 0;
+     garlicTotal= 0;
+     katsuoTotal= 0;
     function maguro() {
       if (maguroTotal != 1) {
         var order = document.getElementById('maguro2').value;
@@ -158,6 +161,48 @@
         document.getElementsByClassName('limit').innerHTML = salmonTotal;
       }
     }
+      /////////////////////////////////////////////////////////////////////////////
+       function chutoro() {
+      if(chutoroTotal != 1) {
+      document.body.style.backgroundColor = "white";
+      var order = document.getElementById('chutoro2').value;
+      document.getElementById('chutoro2').value= " ";
+      var newList = document.createElement('li');
+      var newText = document.createTextNode(order);
+      newList.appendChild(newText);
+      var position = document.getElementsByTagName('ol')[3];
+      position.appendChild(newList);
+      chutoroTotal++;
+      }
+      else if(chutoroTotal >= 1) {
+        document.body.style.backgroundColor = "red";
+         document.getElementById('chutoro2').style.visibility = "hidden";
+      }
+      else {
+        document.getElementsByClassName('limit').innerHTML = chutoroTotal;
+      }
+    }
+      /////////////////////////////////////////////////////////////////////////////////
+       function garlic() {
+      if(garlicTotal != 1) {
+      document.body.style.backgroundColor = "white";
+      var order = document.getElementById('garlic2').value;
+      document.getElementById('garlic2').value= " ";
+      var newList = document.createElement('li');
+      var newText = document.createTextNode(order);
+      newList.appendChild(newText);
+      var position = document.getElementsByTagName('ol')[4];
+      position.appendChild(newList);
+      garlicTotal++;
+      }
+      else if(garlicTotal >= 1) {
+        document.body.style.backgroundColor = "red";
+         document.getElementById('garlic2').style.visibility = "hidden";
+      }
+      else {
+        document.getElementsByClassName('limit').innerHTML = garlicTotal;
+      }
+    }
        var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange= function() {
   if (this.readyState == 4 && this.status == 200) {
@@ -165,6 +210,27 @@ xmlhttp.onreadystatechange= function() {
     document.getElementById(mydata.sushi[1].price).innerHTML = maguro;
   }
 };
+///////////////////////////////////////////////////////////////////////////////////////
+      function katsuo() {
+      if(katsuoTotal != 1) {
+      document.body.style.backgroundColor = "white";
+      var order = document.getElementById('katsuo2').value;
+      document.getElementById('katsuo2').value= " ";
+      var newList = document.createElement('li');
+      var newText = document.createTextNode(order);
+      newList.appendChild(newText);
+      var position = document.getElementsByTagName('ol')[5];
+      position.appendChild(newList);
+      katsuoTotal++;
+      }
+      else if(katsuoTotal >= 1) {
+        document.body.style.backgroundColor = "red";
+         document.getElementById('katsuo2').style.visibility = "hidden";
+      }
+      else {
+        document.getElementsByClassName('limit').innerHTML = katsuoTotal;
+      }
+    }
 xmlhttp.open("GET","sushi.json", true);
 xmlhttp.send();
 
