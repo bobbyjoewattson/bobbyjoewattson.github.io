@@ -4,17 +4,22 @@
   </head>
   <body>
     <h1 id="ax"></h1>
+    <h1 id="ay"></h1>
     <h1 id="rx"></h1>
+    <h1 id="ry"></h1>
     <script>
     var ax;
     var ay;
     var xHigh = 0;
+    var YHigh = 0; 
     var rx;
+    var ry;
       function setup() {
        createCanvas(window.innerWidth, window.innerHeight);
       }
       function draw() {
         ax =accelerationX;
+        ay = accelerationY;
         rx = rotationX;
       if (ax < xHigh) {
         xHigh = ax;
@@ -22,7 +27,16 @@
       }
        document.getElementById('rx').innerHTML = rx;
       }
-        //document.getElementById('ay').innerHTML = ay;
+       if (ay < YHigh) {
+        YHigh = ay;
+        document.getElementById('ay').innerHTML = YHigh;
+      }
+       document.getElementById('ry').innerHTML = ry;
+      }
+      function deviceMoved() {
+        var r = Math.floor(Math.random() * 255);
+        var g = Math.floor(Math.random() * 255);
+        var b = Math.floor(Math.random() * 255);
     </script>
   </body>
 </html>
